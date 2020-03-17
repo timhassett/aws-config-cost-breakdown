@@ -52,10 +52,10 @@ def display_sorted(items):
     out.append("----------------------------------------------------------------------------------------")
     sorted_items = sorted(items.items(), key=lambda x: x[1], reverse=True)
     for item in sorted_items:
-        out.append("{0:45} {1:10} \t$ {2}".format(item[0], item[1], item[1]*0.003))
+        out.append("{0:45} {1:10} \t$ {2:6.2f}".format(item[0], item[1], item[1]*0.003))
     total = sum_config_items(items)
     out.append("----------------------------------------------------------------------------------------")
-    out.append("{0:45} {1:10} \t$ {2}".format("Total", total, total*0.003))
+    out.append("{0:45} {1:10} \t$ {2:6.2f}".format("Total", total, total*0.003))
     return out
 
 months = []
